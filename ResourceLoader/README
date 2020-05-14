@@ -1,0 +1,15 @@
+To Implement:
+
+- Ensure resources are under a resources folder, so the system can find them.
+- The LoadResourceAttribute won't be found by the Injector unless the class it's used in implements IResourceLoader.
+- The path for the Attribute starts from: "Resources/"
+- Example:
+
+public class MyTestResourceLoader : MonoBehaviour, IResourceLoader
+{
+      [LoadResource("myTestResource")]
+      public GameObject myResource;
+}
+
+Note:
+- This is an early implementation, I plan on allowing the user to choose at which point the injection occurs.
